@@ -1,5 +1,7 @@
 import "../App.css";
 import Dropdown from "./Dropdown";
+import ListCctv from "./ListCctv";
+import Coordinate from "./Coordinate";
 
 const LiveMonitoring = () => {
   return (
@@ -11,7 +13,7 @@ const LiveMonitoring = () => {
               <div className="pt-6 pb-6 grid grid-cols-2">
                 <div className="flex justify-start grid grid-cols-5">
                   <div>
-                    <a href="">
+                    <a href="/landing">
                       <img
                         className="w-24"
                         src={require("../assets/beraucoal-logo.png")}
@@ -20,7 +22,7 @@ const LiveMonitoring = () => {
                     </a>
                   </div>
                   <div className="flex items-center">
-                    <a href="">Live Monitoring</a>
+                    <a href="livemonitoring">Live Monitoring</a>
                   </div>
                 </div>
                 <div className="flex justify-end ">
@@ -44,26 +46,7 @@ const LiveMonitoring = () => {
         </div>
         <div className="md:grid grid-cols-11 gap-6">
           <div className="border col-start-1 col-end-4 h-max">
-            <div className="grid grid-rows-6">
-              <h3 className="flex justify-center font-semibold p-2">
-                List CCTV
-              </h3>
-              <button className="text-start p-2 text-black focus:bg-blue-600 focus:text-white">
-                CCTV BMO2 - E Camera 3
-              </button>
-              <button className="text-start p-2 text-black focus:bg-blue-600 focus:text-white">
-                CCTV BMO2 - Blok [X]
-              </button>
-              <button className="text-start p-2 text-black focus:bg-blue-600 focus:text-white">
-                CCTV BMO2 - 7West Camera 1
-              </button>
-              <button className="text-start p-2 text-black focus:bg-blue-600 focus:text-white">
-                CCTV BMO2 - PIT E1
-              </button>
-              <button className="text-start p-2 text-black focus:bg-blue-600 focus:text-white">
-                CCTV BMO2 - Low Wall Pit E
-              </button>
-            </div>
+            <ListCctv />
           </div>
           <div className="border col-start-4 col-end-9">
             <div>
@@ -71,28 +54,7 @@ const LiveMonitoring = () => {
                 <img src={require("../assets/ex_site.jpg")} alt="" />
               </div>
               <div className="flex justify-end pt-2 pb-2">ldsckdn</div>
-              <div className="grid grid-cols-7">
-                <div className="col-start-1 col-end-2">
-                  <h5 className="font-semibold border-b-2 border-black pb-2">
-                    No
-                  </h5>
-                  <p className="pt-2">1</p>
-                </div>
-                <div className="col-start-2 col-end-4">
-                  <h5 className="font-semibold border-b-2 border-black pb-2">
-                    IP
-                  </h5>
-                  <p className="pt-2">10.1.73.20</p>
-                </div>
-                <div className="col-start-4 col-end-8 h-max">
-                  <h5 className="font-semibold border-b-2 border-black pb-2">
-                    Coordinate
-                  </h5>
-                  <p className="pt-2">X = 0.407222221</p>
-                  <p>Y = 0.546181858</p>
-                  <p>Z = 0.386315793</p>
-                </div>
-              </div>
+              <Coordinate />
             </div>
           </div>
           <div className="border col-start-9 col-end-12 h-max">
@@ -224,7 +186,7 @@ const LiveMonitoring = () => {
             <div className="p-2 flex justify-end">
               <a
                 className="text-[18px] text-blue-600 hover:text-blue-800 underline"
-                href=""
+                href="/details"
               >
                 Details
               </a>

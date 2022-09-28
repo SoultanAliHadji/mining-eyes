@@ -2,7 +2,7 @@ import "../App.css";
 
 function Dropdown() {
   return (
-    <button className="relative flex justify-center items-center bg-white focus:outline-none text-gray-600 rounded  group">
+    <button className="relative flex justify-center items-center bg-white focus:outline-none text-gray-600 rounded group">
       <img className="w-8" src={require("../assets/account.png")} alt="" />
       <div className="border-l p-2">
         <svg
@@ -20,11 +20,11 @@ function Dropdown() {
           ></path>
         </svg>
       </div>
-      <div className="absolute hidden group-focus:block top-full min-w-full w-max bg-white shadow-md mt-1 rounded">
+      <div className="absolute hidden group-focus:block top-full w-[100px] w-max bg-white shadow-md mt-6 rounded">
         <ul className="text-left border rounded">
-          <li className="px-4 py-1 hover:bg-gray-100 border-b">Admin</li>
-          <li className="px-4 py-1 hover:bg-gray-100 border-b">
-            <a href="">Logout</a>
+          <li className="px-4 py-1 border-b flex justify-center">Admin</li>
+          <li className="px-4 py-1 hover:bg-gray-100 border-b flex justify-center">
+            <a href="/">Logout</a>
           </li>
         </ul>
       </div>

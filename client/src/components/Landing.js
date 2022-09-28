@@ -10,7 +10,7 @@ const Landing = () => {
             <nav>
               <div className="pt-6 pb-6 grid grid-cols-2">
                 <div>
-                  <a className="" href="">
+                  <a href="/landing">
                     <img
                       className="flex justify-start w-24"
                       src={require("../assets/beraucoal-logo.png")}
@@ -35,7 +35,7 @@ const Landing = () => {
             Detection
           </h2>
           <div className="flex justify-center">
-            <div className="bg-white w-[400px] h-[380px] rounded-[4px] flex items-center justify-center">
+            <div className="bg-white w-[400px] h-[380px] rounded-[4px] flex items-center justify-center shadow-md">
               <div>
                 <div className="flex justify-center mb-6">
                   <img
@@ -51,9 +51,11 @@ const Landing = () => {
                   Live monitoring object detection
                 </h4>
                 <div className="flex justify-center">
-                  <button className="bg-blue-600 w-[48px] h-[30px] rounded-[4px] text-white">
-                    +
-                  </button>
+                  <a href="/livemonitoring">
+                    <button className="bg-blue-600 px-4 py-1 rounded-[4px] text-white font-semibold hover:bg-blue-700">
+                      Start
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>

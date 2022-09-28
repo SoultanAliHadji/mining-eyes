@@ -11,7 +11,7 @@ const Details = () => {
               <div className="pt-6 pb-6 grid grid-cols-2">
                 <div className="flex justify-start grid grid-cols-5">
                   <div>
-                    <a href="">
+                    <a href="/landing">
                       <img
                         className="w-24"
                         src={require("../assets/beraucoal-logo.png")}
@@ -20,7 +20,7 @@ const Details = () => {
                     </a>
                   </div>
                   <div className="flex items-center">
-                    <a href="">Live Monitoring</a>
+                    <a href="/livemonitoring">Live Monitoring</a>
                   </div>
                 </div>
                 <div className="flex justify-end ">
