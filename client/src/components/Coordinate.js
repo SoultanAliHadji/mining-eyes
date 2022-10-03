@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
+import axios from "axios";
 
 const Coordinate = () => {
   const [data, setData] = useState([{}]);
 
   useEffect(() => {
-    fetch("/cam")
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
-        console.log(data);
-      });
+    axios.get("cam")
+    .then(res => {
+      console.log("Getting from ::::", res.data)
+      setData(res.data)
+    }).catch(err => console.log(err))
   }, []);
+
   return (
     <div className="grid grid-cols-7">
         {data.slice(0, 1).map((post) => (

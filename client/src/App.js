@@ -5,6 +5,7 @@ import Landing from "./components/Landing";
 import LiveMonitoring from "./components/LiveMonitoring";
 import Details from "./components/Details";
 import ListCctv from "./components/ListCctv";
+import Ayam from "./components/Ayam";
 
 function App() {
   return (

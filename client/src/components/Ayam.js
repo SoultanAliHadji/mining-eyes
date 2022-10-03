@@ -1,28 +1,28 @@
 import React, { useState, useEffect } from "react";
 import "../App.css";
-import axios from "axios";
+import axios from "axios"
 
-const ListCctv = () => {
+const Ayam = () => {
   const [data, setData] = useState([{}]);
   const [current, setCurrent] = useState();
 
   useEffect(() => {
-    axios.get("/cam")
+    axios.get("cam")
     .then(res => {
       console.log("Getting from ::::", res.data)
       setData(res.data)
     }).catch(err => console.log(err))
   }, []);
 
-  const arr = data.map((data, index) => {
+  const arr = data.map((data) => {
     return (
-      <a className="text-start p-2 text-black focus:bg-blue-600 focus:text-white" href={"livemonitoring/" + current} key={data.id}
-      onClick={() => setCurrent(data.id)}>
-        <button>
+        <button
+          className="text-start p-2 text-black focus:bg-blue-600 focus:text-white"
+          key={data.id}
+          onClick={() => setCurrent(data.id)}
+        >
           {data.cctv}
-          <a></a>
         </button>
-        </a>
     )
   })
 
@@ -35,4 +35,4 @@ const ListCctv = () => {
   );
 };
 
-export default ListCctv;
+export default Ayam;
