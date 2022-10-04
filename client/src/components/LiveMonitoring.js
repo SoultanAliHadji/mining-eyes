@@ -1,9 +1,36 @@
 import "../App.css";
 import Dropdown from "./Dropdown";
-import ListCctv from "./ListCctv";
+import ListNotification from "./ListNotification";
 import Coordinate from "./Coordinate";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 const LiveMonitoring = () => {
+  const [data, setData] = useState([{}]);
+  const [current, setCurrent] = useState();
+
+  useEffect(() => {
+    axios
+      .get("/cam")
+      .then((res) => {
+        console.log("Getting from ::::", res.data);
+        setData(res.data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
+  const arr = data.map((data, index) => {
+    return (
+      <button
+        className="text-start p-2 text-black focus:bg-blue-600 focus:text-white"
+        key={data.id}
+        onClick={() => setCurrent(data.id)}
+      >
+        {data.cctv}
+      </button>
+    );
+  });
+
   return (
     <div className="bg-white-400 h-screen">
       <div className="bg-white drop-shadow-md">
@@ -46,151 +73,24 @@ const LiveMonitoring = () => {
         </div>
         <div className="md:grid grid-cols-11 gap-6">
           <div className="border col-start-1 col-end-4 h-max">
-            <ListCctv />
+            <div className="grid grid-rows-6">
+              <h3 className="flex justify-center font-semibold p-2">
+                List CCTV
+              </h3>
+              {arr}
+            </div>
           </div>
           <div className="border col-start-4 col-end-9">
             <div>
               <div>
                 <img src={require("../assets/ex_site.jpg")} alt="" />
               </div>
-              <div className="flex justify-end pt-2 pb-2">ldsckdn</div>
-              <Coordinate />
+              <div className="flex justify-end px-2 py-2">ldsckdn</div>
+              <Coordinate current={current} />
             </div>
           </div>
           <div className="border col-start-9 col-end-12 h-max">
-            <h3 className="flex justify-center font-semibold p-2">
-              List Notifikasi
-            </h3>
-            <div className="overflow-auto h-[400px] w-full">
-              <button className="text-start pt-2 pb-2 active:bg-gray-100 px-4 w-full">
-                <label className="text-[14px]" htmlFor="">
-                  Wed, 21 Sep 2022 04:50:27 GMT
-                </label>
-                <label class="float-right mt-2" htmlFor="">
-                  HD
-                </label>
-                <br />
-                <label htmlFor="">CCTV BMO2-7West Camera 1</label>
-              </button>
-              <button className="text-start pt-2 pb-2 active:bg-gray-100 px-4 w-full">
-                <label className="text-[14px]" htmlFor="">
-                  Wed, 21 Sep 2022 04:50:27 GMT
-                </label>
-                <label class="float-right mt-2" htmlFor="">
-                  HD
-                </label>
-                <br />
-                <label htmlFor="">CCTV BMO2-7West Camera 1</label>
-              </button>
-              <button className="text-start pt-2 pb-2 active:bg-gray-100 px-4 w-full">
-                <label className="text-[14px]" htmlFor="">
-                  Wed, 21 Sep 2022 04:50:27 GMT
-                </label>
-                <label class="float-right mt-2" htmlFor="">
-                  HD
-                </label>
-                <br />
-                <label htmlFor="">CCTV BMO2-7West Camera 1</label>
-              </button>
-              <button className="text-start pt-2 pb-2 active:bg-gray-100 px-4 w-full">
-                <label className="text-[14px]" htmlFor="">
-                  Wed, 21 Sep 2022 04:50:27 GMT
-                </label>
-                <label class="float-right mt-2" htmlFor="">
-                  HD
-                </label>
-                <br />
-                <label htmlFor="">CCTV BMO2-7West Camera 1</label>
-              </button>
-              <button className="text-start pt-2 pb-2 active:bg-gray-100 px-4 w-full">
-                <label className="text-[14px]" htmlFor="">
-                  Wed, 21 Sep 2022 04:50:27 GMT
-                </label>
-                <label class="float-right mt-2" htmlFor="">
-                  HD
-                </label>
-                <br />
-                <label htmlFor="">CCTV BMO2-7West Camera 1</label>
-              </button>
-              <button className="text-start pt-2 pb-2 active:bg-gray-100 px-4 w-full">
-                <label className="text-[14px]" htmlFor="">
-                  Wed, 21 Sep 2022 04:50:27 GMT
-                </label>
-                <label class="float-right mt-2" htmlFor="">
-                  HD
-                </label>
-                <br />
-                <label htmlFor="">CCTV BMO2-7West Camera 1</label>
-              </button>
-              <button className="text-start pt-2 pb-2 active:bg-gray-100 px-4 w-full">
-                <label className="text-[14px]" htmlFor="">
-                  Wed, 21 Sep 2022 04:50:27 GMT
-                </label>
-                <label class="float-right mt-2" htmlFor="">
-                  HD
-                </label>
-                <br />
-                <label htmlFor="">CCTV BMO2-7West Camera 1</label>
-              </button>
-              <button className="text-start pt-2 pb-2 active:bg-gray-100 px-4 w-full">
-                <label className="text-[14px]" htmlFor="">
-                  Wed, 21 Sep 2022 04:50:27 GMT
-                </label>
-                <label class="float-right mt-2" htmlFor="">
-                  HD
-                </label>
-                <br />
-                <label htmlFor="">CCTV BMO2-7West Camera 1</label>
-              </button>
-              <button className="text-start pt-2 pb-2 active:bg-gray-100 px-4 w-full">
-                <label className="text-[14px]" htmlFor="">
-                  Wed, 21 Sep 2022 04:50:27 GMT
-                </label>
-                <label class="float-right mt-2" htmlFor="">
-                  HD
-                </label>
-                <br />
-                <label htmlFor="">CCTV BMO2-7West Camera 1</label>
-              </button>
-              <button className="text-start pt-2 pb-2 active:bg-gray-100 px-4 w-full">
-                <label className="text-[14px]" htmlFor="">
-                  Wed, 21 Sep 2022 04:50:27 GMT
-                </label>
-                <label class="float-right mt-2" htmlFor="">
-                  HD
-                </label>
-                <br />
-                <label htmlFor="">CCTV BMO2-7West Camera 1</label>
-              </button>
-              <button className="text-start pt-2 pb-2 active:bg-gray-100 px-4 w-full">
-                <label className="text-[14px]" htmlFor="">
-                  Wed, 21 Sep 2022 04:50:27 GMT
-                </label>
-                <label class="float-right mt-2" htmlFor="">
-                  HD
-                </label>
-                <br />
-                <label htmlFor="">CCTV BMO2-7West Camera 1</label>
-              </button>
-              <button className="text-start pt-2 pb-2 active:bg-gray-100 px-4 w-full">
-                <label className="text-[14px]" htmlFor="">
-                  Wed, 21 Sep 2022 04:50:27 GMT
-                </label>
-                <label class="float-right mt-2" htmlFor="">
-                  HD
-                </label>
-                <br />
-                <label htmlFor="">CCTV BMO2-7West Camera 1</label>
-              </button>
-            </div>
-            <div className="p-2 flex justify-end">
-              <a
-                className="text-[18px] text-blue-600 hover:text-blue-800 underline"
-                href="/details"
-              >
-                Details
-              </a>
-            </div>
+            <ListNotification />
           </div>
         </div>
       </div>

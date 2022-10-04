@@ -16,13 +16,13 @@ const ListCctv = () => {
 
   const arr = data.map((data, index) => {
     return (
-      <a className="text-start p-2 text-black focus:bg-blue-600 focus:text-white" href={"livemonitoring/" + current} key={data.id}
-      onClick={() => setCurrent(data.id)}>
-        <button>
+        <button
+          className="text-start p-2 text-black focus:bg-blue-600 focus:text-white"
+          key={data.id}
+          onClick={() => setCurrent(data.id)}
+        >
           {data.cctv}
-          <a></a>
         </button>
-        </a>
     )
   })
 
@@ -30,7 +30,6 @@ const ListCctv = () => {
     <div className="grid grid-rows-6">
       <h3 className="flex justify-center font-semibold p-2">List CCTV</h3>
       {arr}
-      <h1>{current}</h1>
     </div>
   );
 };
