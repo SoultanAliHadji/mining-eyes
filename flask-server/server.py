@@ -97,11 +97,25 @@ notification_list = [
         "object": "Person"
     },
     {
-        "cctv": "CCTV BMO2-7West Camera 1",
+        "cctv": "CCTV BMO2 - Blok [X]",
         "id": 2,
         "stats": "Butuh Validasi",
         "date": "Wed, 21 Sep 2022 04:50:27 GMT",
         "object": "LV"
+    },
+    {
+        "cctv": "CCTV BMO2 - PIT E1",
+        "id": 0,
+        "stats": "Butuh Validasi",
+        "date": "Wed, 21 Sep 2022 04:50:27 GMT",
+        "object": "HD"
+    },
+    {
+        "cctv": "CCTV BMO2 - PIT E1",
+        "id": 1,
+        "stats": "Butuh Validasi",
+        "date": "Mon, 3 Oct 2022 10:26:54 GMT",
+        "object": "Person"
     },
     {
         "cctv": "CCTV BMO2-7West Camera 1",
@@ -118,33 +132,26 @@ notification_list = [
         "object": "Person"
     },
     {
-        "cctv": "CCTV BMO2-7West Camera 1",
+        "cctv": "CCTV BMO2 - Blok [X]",
         "id": 2,
         "stats": "Butuh Validasi",
         "date": "Wed, 21 Sep 2022 04:50:27 GMT",
         "object": "LV"
     },
     {
-        "cctv": "CCTV BMO2-7West Camera 1",
+        "cctv": "CCTV BMO2 - PIT E1",
         "id": 0,
         "stats": "Butuh Validasi",
         "date": "Wed, 21 Sep 2022 04:50:27 GMT",
         "object": "HD"
     },
     {
-        "cctv": "CCTV BMO2 - E Camera 3",
+        "cctv": "CCTV BMO2 - PIT E1",
         "id": 1,
         "stats": "Butuh Validasi",
         "date": "Mon, 3 Oct 2022 10:26:54 GMT",
         "object": "Person"
-    },
-    {
-        "cctv": "CCTV BMO2-7West Camera 1",
-        "id": 2,
-        "stats": "Butuh Validasi",
-        "date": "Wed, 21 Sep 2022 04:50:27 GMT",
-        "object": "LV"
-    },
+    }
 ]
 
 

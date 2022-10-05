@@ -21,7 +21,7 @@ const Details = () => {
   const arr = data.map((data, index) => {
     return (
       <button
-        className="text-start pt-2 pb-2 active:bg-gray-100 w-full  border-b-2 border-gray-200 px-4"
+        className="text-start pt-2 pb-2 active:bg-gray-200 w-full  border-b-2 border-gray-200 px-4"
         key={data.id} onClick={() => setCurrent(data.id)}
       >
         <p>{data.date}</p>

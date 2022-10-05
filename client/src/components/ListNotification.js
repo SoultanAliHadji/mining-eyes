@@ -19,7 +19,7 @@ const ListNotification = () => {
     return (
       <a href="/details">
         <button
-          className="text-start pt-2 pb-2 active:bg-gray-100 px-4 w-full"
+          className="text-start pt-2 pb-2 active:bg-gray-200 px-4 w-full"
           key={data.id}
         >
           <p class="float-right mt-2" htmlFor="">
