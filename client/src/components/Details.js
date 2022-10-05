@@ -6,7 +6,7 @@ import axios from "axios";
 
 const Details = () => {
   const [data, setData] = useState([{}]);
-  const [current, setCurrent] = useState();
+  const [current, setCurrent] = useState(0);
 
   useEffect(() => {
     axios

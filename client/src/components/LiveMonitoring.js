@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 
 const LiveMonitoring = () => {
   const [data, setData] = useState([{}]);
-  const [current, setCurrent] = useState();
+  const [current, setCurrent] = useState(0);
 
   useEffect(() => {
     axios
@@ -74,7 +74,7 @@ const LiveMonitoring = () => {
         <div className="md:grid grid-cols-11 gap-6">
           <div className="border col-start-1 col-end-4 h-max">
             <div className="grid grid-rows-6">
-              <h3 className="flex justify-center font-semibold p-2">
+              <h3 className="flex justify-center font-semibold p-2 border-b-2 border-gray-200">
                 List CCTV
               </h3>
               {arr}
@@ -85,7 +85,51 @@ const LiveMonitoring = () => {
               <div>
                 <img src={require("../assets/ex_site.jpg")} alt="" />
               </div>
-              <div className="flex justify-end px-2 py-2">ldsckdn</div>
+              <div className="pr-2 grid grid-cols-2 border-y-2 border-gray-200 text-[12px]">
+                <div></div>
+                <div className="flex justify-end py-2 grid grid-cols-11">
+                  <div className="col-start-4 flex justify-end">
+                    <button className="bg-blue-500 px-2 py-[2px] rounded-[100px] text-white">
+                      <img src="" alt="" />
+                    </button>
+                  </div>
+                  <div className="col-start-5 flex justify-end">
+                    <button className="bg-blue-500 px-2 py-[2px] rounded-[100px] text-white">
+                      <img src="" alt="" />
+                    </button>
+                  </div>
+                  <div className="col-start-6 flex justify-end">
+                    <button className="bg-blue-500 px-2 py-[2px] rounded-[100px] text-white">
+                      <img src="" alt="" />
+                    </button>
+                  </div>
+                  <div className="col-start-7 flex justify-end">
+                    <button className="bg-blue-500 px-2 py-[2px] rounded-[100px] text-white">
+                      <img src="" alt="" />
+                    </button>
+                  </div>
+                  <div className="col-start-8 flex justify-end">
+                    <button className="bg-blue-500 px-2 py-[2px] rounded-[100px] text-white">
+                      <img src="" alt="" />
+                    </button>
+                  </div>
+                  <div className="col-start-9 flex justify-end">
+                    <button className="bg-blue-500 px-2 py-[2px] rounded-[100px] text-white">
+                      <img src="" alt="" />
+                    </button>
+                  </div>
+                  <div className="col-start-10 flex justify-end">
+                    <button className="bg-blue-500 px-2 py-[2px] rounded-[100px] text-white">
+                      <img src="" alt="" />
+                    </button>
+                  </div>
+                  <div className="col-start-11 flex justify-end">
+                    <button className="bg-blue-500 px-2 py-[2px] rounded-[100px] text-white">
+                      <img src="" alt="" />
+                    </button>
+                  </div>
+                </div>
+              </div>
               <Coordinate current={current} />
             </div>
           </div>

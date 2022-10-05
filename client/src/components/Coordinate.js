@@ -19,7 +19,7 @@ const Coordinate = ({ current }) => {
     <div className="grid grid-cols-7">
       {data.slice(current, current + 1).map((data) => (
         <div className="col-start-1 col-end-2" key={data.id}>
-          <h5 className="font-semibold border-b-2 border-black pb-2 pl-2">
+          <h5 className="font-semibold border-b-2 border-black py-2 pl-2">
             No
           </h5>
           <p className="pt-2 pl-2">{data.no}</p>
@@ -27,13 +27,13 @@ const Coordinate = ({ current }) => {
       ))}
       {data.slice(current, current + 1).map((data) => (
         <div className="col-start-2 col-end-4" key={data.id}>
-          <h5 className="font-semibold border-b-2 border-black pb-2">IP</h5>
+          <h5 className="font-semibold border-b-2 border-black py-2">IP</h5>
           <p className="pt-2">{data.ip}</p>
         </div>
       ))}
       {data.slice(current, current + 1).map((data) => (
         <div className="col-start-4 col-end-8 h-max" key={data.id}>
-          <h5 className="font-semibold border-b-2 border-black pb-2">
+          <h5 className="font-semibold border-b-2 border-black py-2">
             Coordinate
           </h5>
           <p className="pt-2">X = {data.xcoordinate}</p>

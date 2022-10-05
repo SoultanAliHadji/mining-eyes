@@ -50,7 +50,8 @@ const DeviationDetail = ({ current }) => {
           />
         </div>
         <div className="mb-2">
-          <textarea className="w-full p-2" name="" id=""></textarea>
+          <textarea className="w-full p-2" name="" id="">
+          </textarea>
         </div>
         <div>
           <button className="bg-blue-600 text-white px-4 py-2 rounded-[4px]">

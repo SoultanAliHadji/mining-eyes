@@ -36,7 +36,7 @@ const ListNotification = () => {
 
   return (
     <div>
-      <h3 className="flex justify-center font-semibold p-2">List Notifikasi</h3>
+      <h3 className="flex justify-center font-semibold p-2 border-b-2 border-gray-200">List Notifikasi</h3>
       <div className="overflow-auto h-[400px] w-full">{arr}</div>
       <div className="p-2 flex justify-end">
         <a
